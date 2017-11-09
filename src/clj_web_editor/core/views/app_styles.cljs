@@ -21,11 +21,43 @@
       :width "100%"
       :box-sizing "border-box"}
      
+     [:.CodeMirror-selected
+      {:background "#191d35 !important"}]
+
      [:.parinfer-error 
-      {:background "#FFBEBE"}]
+      {:background "#9e0d0d"}]
 
      [:.parinfer-paren-trail 
       {:opacity "0.4"}]]]
 
    [:>#workspace
-    {:width "50%"}]])
+    {:width "50%"}]
+   
+   [:>.console
+    {:position "absolute"
+     :bottom 0
+     :left 0
+     :margin "1em"
+     :font-family "monospace"}
+
+    [:>.messages
+
+     [:>.message
+      {:color "white"
+       :margin-top "1em"
+       :border-radius "5px"
+       :padding "1em"}
+
+      [:&.warning
+       {:background "#ce7804"}]
+
+      [:&.error
+       {:background "#9e0d0d"}]
+
+      [:&.print
+       {:background "#4a4a4a"}]
+      
+      [:>.type
+       {:text-transform "uppercase"
+        :opacity 0.5
+        :font-size "0.75em"}]]]]])

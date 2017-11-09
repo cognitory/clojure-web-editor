@@ -1,7 +1,8 @@
 (ns clj-web-editor.core.views.app
   (:require
-    [re-frame.core :refer [dispatch]]
+    [re-frame.core :refer [dispatch subscribe]]
     [clj-web-editor.core.views.editor :refer [editor-view]]
+    [clj-web-editor.core.views.console :refer [console-view]]
     [clj-web-editor.core.views.styles :refer [styles-view]]))
 
 (defn app-view []
@@ -15,5 +16,7 @@
                  (dispatch [:run-code]))
      :title "Ctrl-Enter"}
     "Eval"]
+
    [editor-view]
-   [:div {:id "workspace"}]])
+   [:div {:id "workspace"}]
+   [console-view]])

@@ -5,3 +5,7 @@
 (reg-sub :code
   (fn [db _]
     (db :code)))
+
+(reg-sub :console
+  (fn [db _]
+    (db :console)))
