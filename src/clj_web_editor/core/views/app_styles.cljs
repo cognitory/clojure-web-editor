@@ -19,7 +19,13 @@
      {:padding "1em"
       :height "100vh"
       :width "100%"
-      :box-sizing "border-box"}]]
+      :box-sizing "border-box"}
+     
+     [:.parinfer-error 
+      {:background "#FFBEBE"}]
+
+     [:.parinfer-paren-trail 
+      {:opacity "0.4"}]]]
 
    [:>#workspace
     {:width "50%"}]])
