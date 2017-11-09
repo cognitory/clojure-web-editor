@@ -17,6 +17,6 @@
      :title "Ctrl-Enter"}
     "Eval"]
 
-   [editor-view]
+   [editor-view @(subscribe [:code])]
    [:div {:id "workspace"}]
    [console-view]])

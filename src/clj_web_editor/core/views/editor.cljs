@@ -8,24 +8,23 @@
     [reagent.core :as r]
     [re-frame.core :refer [dispatch subscribe]]))
 
-(defn editor-view []
-  (let [code (subscribe [:code])]
-    (r/create-class
-      {:component-did-mount
-       (fn []
-         (let [cm (doto 
-                    (js/CodeMirror 
-                      (.. js/document (getElementById "editor"))
-                      (clj->js {:theme "railscasts"
-                                :mode "clojure"
-                                :autofocus true
-                                :matchBrackets true
-                                :value @code}))
-                    (.on "change" 
-                         (fn [editor]
-                           (dispatch [:update-code (.getValue editor)]))))]
-           (js/parinferCodeMirror.init cm "smart" #js {:forceBalance true})))
+(defn editor-view [code]
+  (r/create-class
+    {:component-did-mount
+     (fn [comp]
+       (let [cm (doto 
+                  (js/CodeMirror 
+                    (r/dom-node comp)
+                    (clj->js {:theme "railscasts"
+                              :mode "clojure"
+                              :autofocus true
+                              :matchBrackets true
+                              :value code}))
+                  (.on "change" 
+                       (fn [editor]
+                         (dispatch [:update-code (.getValue editor)]))))]
+         (js/parinferCodeMirror.init cm "smart" #js {:forceBalance true})))
 
-       :reagent-render
-       (fn []
-         [:div {:id "editor"}])})))
+     :reagent-render
+     (fn []
+       [:div.editor])}))

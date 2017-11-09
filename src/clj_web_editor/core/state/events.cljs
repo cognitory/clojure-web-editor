@@ -7,8 +7,9 @@
 
 (reg-event-fx :init
   (fn [_ _]
-    {:db {:code ""
-          :console []}}))
+    {:db {:code (.. js/localStorage (getItem "code"))
+          :console []}
+     :dispatch [:load-code]}))
 
 (reg-event-fx :console-log
   (fn [{db :db} [_ type message]]
@@ -18,6 +19,11 @@
 (reg-event-fx :console-clear
   (fn [{db :db} _]
     {:db (assoc db :console [])}))
+
+(reg-event-fx :save-code
+  (fn [{db :db} _]
+    (.. js/localStorage (setItem "code" (db :code)))
+    {}))
 
 (reg-event-fx :run-code
   (fn [{db :db} _]
@@ -33,5 +39,6 @@
 
 (reg-event-fx :update-code
   (fn [{db :db} [_ code]]
-    {:db (assoc db :code code)}))
+    {:db (assoc db :code code)
+     :dispatch [:save-code]}))
  

@@ -12,7 +12,7 @@
      :margin "1em"
      :z-index 1000}]
    
-   [:>#editor
+   [:>.editor
     {:width "50%"}
 
     [:>.CodeMirror
