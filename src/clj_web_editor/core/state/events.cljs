@@ -36,7 +36,7 @@
                   [:set-eval-state :waiting]]
      :eval {:code (db :code)
             :on-print (fn [& args]
-                        (dispatch [:console-log :print (clojure.string/join " " args)]))
+                        (dispatch [:console-log :print args]))
             :on-warning (fn [warning]
                           (dispatch [:console-log :warning warning]))
             :on-success (fn [value]

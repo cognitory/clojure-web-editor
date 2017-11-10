@@ -1,13 +1,6 @@
 (ns clj-web-editor.core.views.console
   (:require
-    [re-frame.core :refer [dispatch subscribe]]
-    [zprint.core :refer [zprint-str]]))
-
-(defn format-code [code]
-  (zprint-str code 50 {:style :community
-                       :parse-string? true
-                       :map {:comma? false
-                             :force-nl? true}}))
+    [re-frame.core :refer [dispatch subscribe]]))
 
 (defn console-view []
   (let [messages @(subscribe [:console])]
@@ -21,8 +14,6 @@
          (for [message messages]
            [:div.message {:class (message :type)}
             [:div.type (message :type)]
-            [:div.content
-             (case (message :type)
-               :error (message :content)
-               :warning (message :content)
-               :print (format-code (message :content)))]]))])))
+            (into [:div.content]
+                  (for [item (message :content)]
+                    (message :content)))]))])))
