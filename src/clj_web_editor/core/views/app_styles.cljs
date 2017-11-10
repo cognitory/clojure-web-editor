@@ -50,7 +50,9 @@
       {:opacity "0.4"}]]]
 
    [:>#workspace
-    {:width "50%"}]
+    {:width "50%"
+     :height "80vh"
+     :overflow "auto"}]
    
    [:>.console
     {:width "100vw"
