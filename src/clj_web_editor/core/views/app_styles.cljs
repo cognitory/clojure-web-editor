@@ -3,6 +3,7 @@
 (defn >app []
   [:>.app
    {:display "flex"
+    :flex-wrap "wrap"
     :width "100%"}
 
    [:>.run
@@ -30,12 +31,13 @@
     [:>button]]
    
    [:>.editor
-    {:width "50%"}
+    {:width "50%"
+     :height "80vh"}
 
     [:>.CodeMirror
      {:padding "1em"
-      :height "100vh"
       :width "100%"
+      :height "100%"
       :box-sizing "border-box"}
      
      [:.CodeMirror-selected
@@ -51,11 +53,13 @@
     {:width "50%"}]
    
    [:>.console
-    {:position "absolute"
-     :bottom 0
-     :left 0
-     :margin "1em"
-     :font-family "monospace"}
+    {:width "100vw"
+     :height "20vh"
+     :padding "1em"
+     :box-sizing "border-box"
+     :background "black"
+     :font-family "monospace"
+     :overflow-y "auto"}
 
     [:>.messages
 
@@ -63,7 +67,8 @@
       {:color "white"
        :margin-top "1em"
        :border-radius "5px"
-       :padding "1em"}
+       :padding "1em"
+       }
 
       [:&.warning
        {:background "#ce7804"}]
@@ -77,4 +82,8 @@
       [:>.type
        {:text-transform "uppercase"
         :opacity 0.5
-        :font-size "0.75em"}]]]]])
+        :font-size "0.75em"
+        :margin-bottom "0.25rem"}]
+      
+      [:>.content
+       {:white-space "pre"}]]]]])
