@@ -8,6 +8,15 @@
     [reagent.core :as r]
     [re-frame.core :refer [dispatch subscribe]]))
 
+(defn better-tab [cm]
+  ; based on https://github.com/codemirror/CodeMirror/issues/988#issuecomment-14921785
+  (if (.somethingSelected cm)
+    (.indentSelection cm "add")
+    (.replaceSelection cm
+                       (apply str (repeat (.getOption cm "indentUnit") " "))
+                       "end"
+                       "+input")))
+
 (defn editor-view [code]
   (r/create-class
     {:component-did-mount
@@ -17,6 +26,7 @@
                     (r/dom-node comp)
                     (clj->js {:theme "railscasts"
                               :mode "clojure"
+                              :extraKeys {"Tab" better-tab}
                               :autofocus true
                               :matchBrackets true
                               :value code}))
