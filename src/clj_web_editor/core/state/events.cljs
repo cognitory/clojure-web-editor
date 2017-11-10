@@ -1,5 +1,6 @@
 (ns clj-web-editor.core.state.events
   (:require 
+    [clojure.string :as string]
     [re-frame.core :refer [reg-fx reg-event-fx dispatch]]
     [clj-web-editor.core.state.eval :refer [eval-fx]]))
 
@@ -35,7 +36,7 @@
                   [:set-eval-state :waiting]]
      :eval {:code (db :code)
             :on-print (fn [& args]
-                        (dispatch [:console-log :print args]))
+                        (dispatch [:console-log :print (clojure.string/join " " args)]))
             :on-warning (fn [warning]
                           (dispatch [:console-log :warning warning]))
             :on-success (fn [value]

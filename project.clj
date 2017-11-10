@@ -9,7 +9,8 @@
                  [re-frame "0.10.2"]
                  [reagent "0.8.0-alpha2"]
                  [garden "1.3.3"]
-                 [com.cognitect/transit-cljs "0.8.239"]]
+                 [com.cognitect/transit-cljs "0.8.239"]
+                 [zprint "0.4.4"]]
 
   :plugins [[lein-figwheel "0.5.14"]
             [lein-cljsbuild "1.1.7"]]
