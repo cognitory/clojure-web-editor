@@ -5,12 +5,29 @@
    {:display "flex"
     :width "100%"}
 
-   [:>button.run
+   [:>.run
     {:position "absolute"
      :top 0
      :right "50%"
      :margin "1em"
-     :z-index 1000}]
+     :z-index 1000}
+
+    [:>.icon
+     {:height "1em" 
+      :width "1em"
+      :vertical-align "middle"
+      :margin-right "0.25em"}
+
+     [:&.waiting
+      {:fill "#ffffff"}]
+
+     [:&.error
+      {:fill "#e77434"}]
+
+     [:&.success
+      {:fill "#de95fe"}]]
+
+    [:>button]]
    
    [:>.editor
     {:width "50%"}

@@ -9,3 +9,7 @@
 (reg-sub :console
   (fn [db _]
     (db :console)))
+
+(reg-sub :eval-state
+  (fn [db _]
+    (db :eval-state)))
