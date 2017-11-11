@@ -37,15 +37,15 @@
    [:>.console
     {:width width-column-3
      :height "100vh"
-     :padding "1em"
-     :box-sizing "border-box"
      :background "black"
-     :font-family "monospace"
-     :overflow-y "auto"}
+     :display "flex"
+     :flex-direction "column"}
 
     [:>.controls 
      {:display "flex"
-      :justify-content "space-between"}
+      :justify-content "space-between"
+      :padding "1em"
+      :flex-shrink 0}
 
      [:>.run
 
@@ -67,13 +67,16 @@
       [:>button]]]
 
     [:>.messages
+     {:padding "0 1em"
+      :box-sizing "border-box"
+      :overflow-y "auto"
+      :font-family "monospace"}
 
      [:>.message
       {:color "white"
-       :margin-top "1em"
+       :margin-bottom "1em"
        :border-radius "5px"
-       :padding "1em"
-       }
+       :padding "1em"}
 
       [:&.warning
        {:background "#ce7804"}]
@@ -91,4 +94,5 @@
         :margin-bottom "0.25rem"}]
 
       [:>.content
-       {:white-space "pre"}]]]]])
+       {:white-space "pre-wrap"
+        :overflow "auto"}]]]]])

@@ -37,4 +37,4 @@
           [:div.type (message :type)]
           (into [:div.content]
                 (for [item (message :content)]
-                  item))]))]))
+                  (str item " ")))]))]))
