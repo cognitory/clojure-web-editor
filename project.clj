@@ -30,7 +30,7 @@
                                    :asset-path "/js/out"
                                    :output-to "resources/public/js/editor.js"
                                    :output-dir "resources/public/js/out/prod"
-                                   :optimizations :advanced
+                                   :optimizations :simple
                                    ; to debug advanced compilation issues, enable these options:
                                    ;:source-map "resources/public/js/bloom.base.js.map"
                                    ;:pseudo-names true
