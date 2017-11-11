@@ -16,4 +16,4 @@
             [:div.type (message :type)]
             (into [:div.content]
                   (for [item (message :content)]
-                    (message :content)))]))])))
+                    item))]))])))
