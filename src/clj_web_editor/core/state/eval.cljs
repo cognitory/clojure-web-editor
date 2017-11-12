@@ -1,6 +1,8 @@
 (ns clj-web-editor.core.state.eval
   (:require
-    [replumb.core :as replumb]))
+    [replumb.core :as replumb]
+    ; require this ns so it is available for the tutorial
+    [tutorial.helpers :as h]))
 
 (defn eval-fx [{:keys [code 
                        on-success on-error 

@@ -1,0 +1,41 @@
+({:country "Canada" :year 1800 :population 645526.0 :gdp 1310 :life-expectancy 39.0}
+ {:country "Canada" :year 1850 :population 2487811.0 :gdp 2177 :life-expectancy 40.99}
+ {:country "Canada" :year 1900 :population 5530806.0 :gdp 4709 :life-expectancy 48.29}
+ {:country "Canada" :year 1950 :population 1.3736997E7 :gdp 11955 :life-expectancy 68.26}
+ {:country "Canada" :year 2000 :population 3.0701904E7 :gdp 36622 :life-expectancy 79.2}
+ {:country "China" :year 1800 :population 3.21675008E8 :gdp 891 :life-expectancy 32.0}
+ {:country "China" :year 1850 :population 4.02711296E8 :gdp 905 :life-expectancy 32.0}
+ {:country "China" :year 1900 :population 3.95184544E8 :gdp 806 :life-expectancy 32.0}
+ {:country "China" :year 1950 :population 5.441129E8 :gdp 644 :life-expectancy 41.04}
+ {:country "China" :year 2000 :population 1.26997453E9 :gdp 4393 :life-expectancy 69.8}
+ {:country "Germany" :year 1800 :population 2.288692E7 :gdp 2050 :life-expectancy 38.37}
+ {:country "Germany" :year 1850 :population 3.3663144E7 :gdp 2715 :life-expectancy 38.37}
+ {:country "Germany" :year 1900 :population 5.5293432E7 :gdp 5570 :life-expectancy 43.92}
+ {:country "Germany" :year 1950 :population 6.9786248E7 :gdp 7214 :life-expectancy 66.91}
+ {:country "Germany" :year 2000 :population 8.1895928E7 :gdp 36138 :life-expectancy 78.1}
+ {:country "India" :year 1800 :population 1.68574896E8 :gdp 728 :life-expectancy 25.44}
+ {:country "India" :year 1850 :population 1.96657648E8 :gdp 724 :life-expectancy 25.44}
+ {:country "India" :year 1900 :population 2.43073952E8 :gdp 801 :life-expectancy 18.35}
+ {:country "India" :year 1950 :population 3.76325216E8 :gdp 831 :life-expectancy 34.77}
+ {:country "India" :year 2000 :population 1.05348109E9 :gdp 2571 :life-expectancy 61.5}
+ {:country "Russia" :year 1800 :population 3.1088398E7 :gdp 1500 :life-expectancy 29.57}
+ {:country "Russia" :year 1850 :population 4.102382E7 :gdp 1848 :life-expectancy 29.57}
+ {:country "Russia" :year 1900 :population 6.4836676E7 :gdp 3193 :life-expectancy 30.75}
+ {:country "Russia" :year 1950 :population 1.02798656E8 :gdp 7578 :life-expectancy 57.27}
+ {:country "Russia" :year 2000 :population 1.46400944E8 :gdp 13002 :life-expectancy 65.1}
+ {:country "South Africa" :year 1800 :population 1440820.0 :gdp 979 :life-expectancy 33.5}
+ {:country "South Africa" :year 1850 :population 2091873.0 :gdp 685 :life-expectancy 33.5}
+ {:country "South Africa" :year 1900 :population 4721134.0 :gdp 1458 :life-expectancy 33.5}
+ {:country "South Africa" :year 1950 :population 1.3683162E7 :gdp 5783 :life-expectancy 43.53}
+ {:country "South Africa" :year 2000 :population 4.4896856E7 :gdp 8916 :life-expectancy 56.4}
+ {:country "United Kingdom" :year 1800 :population 1.2327466E7 :gdp 2892 :life-expectancy 38.65}
+ {:country "United Kingdom" :year 1850 :population 2.2623572E7 :gdp 3693 :life-expectancy 42.8}
+ {:country "United Kingdom" :year 1900 :population 3.799576E7 :gdp 6651 :life-expectancy 46.32}
+ {:country "United Kingdom" :year 1950 :population 5.0616012E7 :gdp 10318 :life-expectancy 68.66}
+ {:country "United Kingdom" :year 2000 :population 5.8867004E7 :gdp 31150 :life-expectancy 77.8}
+ {:country "United States" :year 1800 :population 6801854.0 :gdp 2095 :life-expectancy 39.41}
+ {:country "United States" :year 1850 :population 2.4136292E7 :gdp 2920 :life-expectancy 39.41}
+ {:country "United States" :year 1900 :population 7.7415608E7 :gdp 6527 :life-expectancy 48.93}
+ {:country "United States" :year 1950 :population 1.5781304E8 :gdp 15460 :life-expectancy 68.12}
+ {:country "United States" :year 2000 :population 2.82895744E8 :gdp 46347 :life-expectancy 76.9}
+)
