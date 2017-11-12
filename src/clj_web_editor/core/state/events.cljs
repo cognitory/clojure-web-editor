@@ -38,12 +38,12 @@
             :on-print (fn [& args]
                         (dispatch [:console-log :print args]))
             :on-warning (fn [warning]
-                          (dispatch [:console-log :warning warning]))
+                          (dispatch [:console-log :warning [warning]]))
             :on-success (fn [value]
                           (dispatch [:set-eval-state :success]))
             :on-error (fn [error]
                         (dispatch [:set-eval-state :error])
-                        (dispatch [:console-log :error (str (aget error "cause"))]))}}))
+                        (dispatch [:console-log :error [(str (aget error "cause"))]]))}}))
 
 (reg-event-fx :update-code
   (fn [{db :db} [_ code]]

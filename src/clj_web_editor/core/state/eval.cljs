@@ -6,12 +6,6 @@
                        on-success on-error 
                        on-print on-warning]}]
 
-  ; 'binding' does not work here when external files 
-  ; are fetched prior to running the code
-  ; just set *print-fn* permanently  
-  (set! *print-fn* (fn [& args]
-                     (apply on-print args))) 
-
   (replumb/read-eval-call 
     {:target :browser
      :context :statement

@@ -38,3 +38,15 @@
           (into [:div.content]
                 (for [item (message :content)]
                   (str item " ")))]))]))
+
+(set! js/console.log 
+      (fn [& args]
+        (dispatch [:console-log :print args])))
+
+(set! js/console.error 
+      (fn [& args]
+        (dispatch [:console-log :print args])))
+
+(set! js/console.warn 
+      (fn [& args]
+        (dispatch [:console-log :warning args])))
