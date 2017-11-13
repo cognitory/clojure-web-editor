@@ -1,17 +1,9 @@
 (ns tutorial.helpers
  (:require
-   [cljs.reader :as reader]
-   [zprint.core :refer [zprint-str]])
+   [cljs.reader :as reader])
  (:import 
    goog.net.XhrIo))
 
-(defn pprint [code]
-  (println (zprint-str code 
-                       100 
-                       {:style :community
-                        :parse-string? false
-                        :map {:comma? false
-                              :force-nl? true}})))
 (defn xhr
   [file-url src-cb]
   (try
@@ -23,4 +15,7 @@
     (catch :default e
       (src-cb nil))))
 
-(def read-string reader/read-string)
+(defn get-data [callback]
+  (xhr "data.edn"
+       (fn [data]
+         (callback (reader/read-string data)))))
