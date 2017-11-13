@@ -4,7 +4,7 @@
 
 (defn icon [id class]
   [:svg.icon {:class class}
-   [:use {:xlink-href (str "/icons.svg#icon-" id)}]])
+   [:use {:xlink-href (str "./icons.svg#icon-" id)}]])
 
 (defn run-button-view []
   [:div.run
