@@ -9,8 +9,7 @@
                  [re-frame "0.10.2"]
                  [reagent "0.8.0-alpha2"]
                  [garden "1.3.3"]
-                 [com.cognitect/transit-cljs "0.8.239"]
-                 [zprint "0.4.4"]]
+                 [com.cognitect/transit-cljs "0.8.239"]]
 
   :plugins [[lein-figwheel "0.5.14"]
             [lein-cljsbuild "1.1.7"]]
@@ -21,18 +20,18 @@
                         :source-paths ["src"]
                         :figwheel {:on-jsload "clj-web-editor.core.core/reload"}
                         :compiler {:main "clj-web-editor.core.core"
-                                   :asset-path "/js/out"
+                                   :asset-path "/js/out/dev"
                                    :output-to "resources/public/js/editor.js"
-                                   :output-dir "resources/public/js/out"}}
+                                   :output-dir "resources/public/js/out/dev"}}
                        {:id "release"
                         :source-paths ["src"]
                         :compiler {:main "clj-web-editor.core.core"
                                    :asset-path "/js/out"
-                                   :output-to "resources/public/js/editor.js"
+                                   :output-to "resources/public/js/editor.min.js"
                                    :output-dir "resources/public/js/out/prod"
                                    :optimizations :simple
+                                   :pretty-print false
                                    ; to debug advanced compilation issues, enable these options:
-                                   ;:source-map "resources/public/js/bloom.base.js.map"
+                                   ;:source-map "resources/public/js/editor.min.js.map"
                                    ;:pseudo-names true
-                                   ;:pretty-print true
                                    }}]})

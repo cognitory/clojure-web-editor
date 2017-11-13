@@ -8,7 +8,7 @@
 
 (reg-event-fx :init
   (fn [_ _]
-    {:db {:code (.. js/localStorage (getItem "code"))
+    {:db {:code (or (.. js/localStorage (getItem "code")) "")
           :eval-state :none ; :waiting :success :error
           :console []}}))
 
